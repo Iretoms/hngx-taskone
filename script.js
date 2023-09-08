@@ -13,16 +13,10 @@ const days = [
 
 function setTime() {
   const day = new Date().getDay();
-  const utcHour = new Date().getUTCHours();
-  const utcHourForTime = utcHour % 12;
-  const utcMinute = new Date().getUTCMinutes();
+ const utcTime = new Date().getUTCMilliseconds()
 
   currentDay.innerHTML = `${days[day - 1]}`;
-  currentUTCTime.innerHTML = `${
-    utcHourForTime < 10 ? `0${utcHourForTime}` : utcHourForTime
-  }:${utcMinute < 10 ? `0${utcMinute}` : utcMinute} ${
-    utcHour >= 12 ? "PM" : "AM"
-  }`;
+  currentUTCTime.innerHTML = `${utcTime} ms`;
 }
 
 setTime();
