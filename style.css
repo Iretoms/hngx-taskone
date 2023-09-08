@@ -71,6 +71,10 @@ main {
     font-size: 1.8rem;
 }
 
+.other_info div p:nth-child(1) a {
+    color: inherit;
+}
+
 .other_info div p:nth-child(2) {
     font-weight: 300;
     font-size: 1.1rem;
